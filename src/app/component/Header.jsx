@@ -1,7 +1,6 @@
 'use client'
-import React from 'react'
+import React, { useState } from 'react'
 import Image from 'next/image'
-import { useState } from 'react'
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -24,7 +23,7 @@ const Header = () => {
       {/* Mobile menu */}
       {isMenuOpen && (
         <div className='absolute top-[10dvh] left-0 right-0 bg-[#081C15] md:hidden'>
-          <ul className='flex flex-col items-center py-4'>
+          <ul className='flex flex-col items-center py-4 text-white'>
             <li className='hover:text-[#CAF0F8] hover:cursor-pointer py-2'>Home</li>
             <li className='hover:text-[#CAF0F8] hover:cursor-pointer py-2'>About</li>
             <li className='hover:text-[#CAF0F8] hover:cursor-pointer py-2'>Skills</li>
