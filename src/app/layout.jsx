@@ -17,7 +17,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className= {karla.className}>{children}
       <Header/>
-      <main className="min-h-[70dvh]">
+      <main>
         
      
       </main>
