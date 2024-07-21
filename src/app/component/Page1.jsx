@@ -10,12 +10,12 @@ const Page1 = () => {
   return (
     <div className='mt-16 min-h-screen w-full relative flex flex-col md:flex-row'>
       {/* Background divs */}
-      <div className='absolute top-0 left-0 w-full md:w-2/3 h-1/2 md:h-full bg-[#081C15] z-0'></div>
-      <div className='absolute top-1/2 md:top-0 left-0 md:left-2/3 w-full md:w-1/3 h-1/2 md:h-full bg-[#52B788] z-0'></div>
+      <div className='absolute  top-0 left-0 w-full md:w-2/3 h-1/2 md:h-full bg-[#081C15] z-0'></div>
+      <div className='absolute  top-1/2 md:top-0 left-0 md:left-2/3 w-full md:w-1/3 h-1/2 md:h-full bg-[#52B788] z-0'></div>
 
       {/* Content */}
       <div className='relative z-10 flex flex-col md:flex-row w-full'>
-        <div className='w-full md:w-2/3 p-6 md:p-12 text-white'>
+        <div className='w-full  md:w-2/3 p-6 md:p-12 text-white'>
           <motion.div
             className='mb-6 md:mb-10'
             initial={{ opacity: 0, y: -20 }}
@@ -38,7 +38,7 @@ const Page1 = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            I&apos;M OLADELE AKOMOLEDE
+            <span className='text-[]'>I&apos;M</span> OLADELE AKOMOLEDE
           </motion.h1>
           <motion.p
             className='text-base md:text-lg font-semibold mb-3 md:mb-5'

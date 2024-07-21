@@ -28,24 +28,26 @@ const About = () => {
   }, [controlsLeft, controlsRight, inView]);
 
   return (
-    <div ref={ref} className='bg-[#081C15] min-h-screen w-full relative flex flex-col md:flex-row'>
+    <div ref={ref} className='bg-[#081C15] min-h-screen w-full relative flex flex-col md:flex-row md:px-12'>
       <div className='absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#95D5B2] from-67% to-[#D8F3DC] to-33%'></div>
       
       {/* Left side double-layer container */}
       <motion.div
         initial={{ x: -100, opacity: 0 }}
         animate={controlsLeft}
-        className='w-full md:w-1/2 h-64 md:h-auto relative mb-8 md:mb-0 flex items-center justify-center'
+        className='w-full md:w-1/2 h-80 md:h-auto relative mb-8 md:mb-0 flex items-center justify-center'
       >
-        <div className='absolute top-4 left-2 right-2 bottom-2 md:top-8 md:left-4 md:right-4 md:bottom-4 bg-[#1B4332] rounded-lg'></div>
-        <div className='absolute top-8 left-4 right-4 bottom-4 md:top-16 md:left-8 md:right-8 md:bottom-8 bg-[#2D6A4F] rounded-lg flex items-center justify-center'>
-          <Image
-            src='/pics-replace.png'
-            alt='about pics'
-            width={300}
-            height={300}
-            className='w-48 h-48 md:w-[600px] md:h-[600px] lg:w-[700px] lg:h-[700px] rounded-lg filter grayscale hover:grayscale-0 hover:hue-rotate-180 transition duration-500 ease-in-out'
-          />
+        <div>
+            <div className='absolute top-4 left-2 right-2 bottom-2 md:top-8 md:left-4 md:right-4 md:bottom-4 bg-[#1B4332] rounded-lg'></div>
+            <div className='absolute top-8 left-4 right-4 bottom-4 md:top-16 md:left-8 md:right-8 md:bottom-8 bg-[#2D6A4F] rounded-lg flex items-center justify-center'>
+              <Image
+                src='/pics-replace.png'
+                alt='about pics'
+                width={300}
+                height={300}
+                className='w-48 h-48 md:w-[600px] md:h-[600px] lg:w-[700px] lg:h-[700px] rounded-lg filter grayscale hover:grayscale-0 hover:hue-rotate-180 transition duration-500 ease-in-out'
+              />
+            </div>
         </div>
       </motion.div>
 
@@ -53,7 +55,7 @@ const About = () => {
       <motion.div
         initial={{ x: 100, opacity: 0 }}
         animate={controlsRight}
-        className='w-full md:w-1/2 p-6 md:p-12 overflow-y-auto'
+        className='w-full md:w-1/2 p-6 md:p-12 overflow-y-auto  md:px-12'
       >
         <h1 className='text-white font-bold text-4xl md:text-6xl mb-4 md:mb-8'>ABOUT <span className='text-[#52B788]'>ME</span></h1>
         <div className='w-20 md:w-24 border-t-4 border-green-600 mb-6 md:mb-8'></div>
@@ -73,6 +75,7 @@ const About = () => {
         <p className='text-white mb-4 md:mb-6'>🔍 <span className='font-semibold'>Tools:</span> VS Code (my trusty sidekick), Git (version control ninja), and a strong cup of coffee (essential for late-night coding sessions)</p>
         
         <p className='text-[#52B788] italic'>Remember, every line of code I write is a step toward making the web a better place. Thanks for stopping by! 🙌</p>
+        <p className='border-b-4 w-1/2 border-[#73e6b0] pt-4 md:pt-20'></p>
       </motion.div>
     </div>
   );
