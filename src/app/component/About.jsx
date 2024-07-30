@@ -28,7 +28,7 @@ const About = () => {
   }, [controlsLeft, controlsRight, inView]);
 
   return (
-    <div ref={ref} className='bg-[#081C15] min-h-screen w-full relative flex flex-col md:flex-row md:px-12 overflow-x-hidden'>
+    <div ref={ref} className='bg-[#081C15] min-h-screen w-full relative flex flex-col md:flex-row md:px-12 overflow-x-hidden' id='about'>
       <div className='absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#95D5B2] from-67% to-[#D8F3DC] to-33%'></div>
       
       {/* Left side double-layer container */}

@@ -30,9 +30,10 @@ const ProjectCard = ({ project, index }) => {
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
           backgroundColor: 'rgba(27, 67, 50, 0.8)', // Semi-transparent background color
+          
         }}
       ></div>
-      <div className='absolute inset-0 bg-gradient-to-b from-black via-transparent to-black'></div>
+      <div className='absolute inset-0 bg-gradient-to-b from-black via-transparent to-black' id='project'></div>
       <div className='absolute top-0 left-0 right-0 p-4'>
         <h2 className='text-white text-xl font-semibold mb-2'>{project.name}</h2>
       </div>

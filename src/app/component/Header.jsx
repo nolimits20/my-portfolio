@@ -43,11 +43,11 @@ const Header = () => {
   }
 
   const menuItems = [
-    { name: 'Home', href: '/' },
-    { name: 'About', href: '/about' },
-    { name: 'Skills', href: '/Skills' },
-    { name: 'Projects', href: '/Project' },
-    { name: 'Contact', href: '/Contact' }
+    { name: 'Home', href: '#' },
+    { name: 'About', href: '#about' },
+    { name: 'Skills', href: '#skills' },
+    { name: 'Projects', href: '#project' },
+    { name: 'Contact', href: '#contact' }
   ]
 
   return (
@@ -97,7 +97,7 @@ const Header = () => {
                   animate="visible"
                   className='hover:text-[#CAF0F8] hover:cursor-pointer py-2 w-full text-center transition-all duration-300 ease-in-out hover:bg-[#0D2E1F]'
                 >
-                  <Link href={item.href}>{item.name}</Link>
+                  <Link onClick={handleLinkClick} href={item.href}>{item.name}</Link>
                 </motion.li>
               ))}
             </ul>

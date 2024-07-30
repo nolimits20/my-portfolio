@@ -47,7 +47,7 @@ const Contact = () => {
     }
   };
   return (
-    <div className='bg-[#081C15] min-h-screen w-full relative p-8 flex flex-col lg:flex-row items-center justify-center'>
+    <div className='bg-[#081C15] min-h-screen w-full relative p-8 flex flex-col lg:flex-row items-center justify-center ' id='contact'>
       <ToastContainer />
       <div className='absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#9baca2] to-[#a7cead]'></div>
       
