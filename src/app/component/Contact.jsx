@@ -1,9 +1,54 @@
+'use client'
 import React from 'react';
 import Image from 'next/image';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Contact = () => {
+  const [result, setResult] = React.useState("")
+  const onSubmit = async (event) => {
+    event.preventDefault();
+    setResult("Sending....");
+    const formData = new FormData(event.target);
+
+    formData.append("access_key", "aa47b919-68b2-49f7-bc31-b197a85095ab");
+
+    const response = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      body: formData
+    });
+
+    const data = await response.json();
+    
+    if (data.success) {
+      setResult("Form Submitted Successfully");
+      event.target.reset();
+      toast.success('Message sent successfully!', {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+      });
+    } else {
+      console.log("Error", data);
+      setResult(data.message);
+      toast.error('Error sending message. Please try again.', {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+      });
+    }
+  };
   return (
     <div className='bg-[#081C15] min-h-screen w-full relative p-8 flex flex-col lg:flex-row items-center justify-center'>
+      <ToastContainer />
       <div className='absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#9baca2] to-[#a7cead]'></div>
       
       <div className='flex justify-center w-full lg:w-5/12 lg:hidden mb-8'>
@@ -18,7 +63,7 @@ const Contact = () => {
 
       <div className='bg-[#52B788] p-10 rounded-lg shadow-lg w-full lg:w-7/12 flex flex-col items-center lg:items-start mb-8 lg:mb-0'>
         <h2 className='text-3xl font-bold mb-6 text-[#fff] text-center lg:text-left'>Contact Me</h2>
-        <form className='space-y-4 w-full'>
+        <form className='space-y-4 w-full' onSubmit={onSubmit}>
           <div>
             <label className='block text-[#081C15] mb-2' htmlFor='name'>Name</label>
             <input 

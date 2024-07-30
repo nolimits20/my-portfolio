@@ -39,7 +39,7 @@ const Page1 = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            <span className='text-[]'>I&apos;M</span> OLADELE AKOMOLEDE
+            <span className='text-[]'>I AM</span> OLADELE AKOMOLEDE
           </motion.h1>
           <motion.p
             className='text-base md:text-lg font-semibold mb-3 md:mb-5'
