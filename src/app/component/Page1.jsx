@@ -5,6 +5,7 @@ import { BsLinkedin, BsGithub, BsTwitter } from 'react-icons/bs';
 import { TfiEmail } from 'react-icons/tfi';
 import { TbFileCv } from 'react-icons/tb';
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 
 const Page1 = () => {
   return (
@@ -71,11 +72,21 @@ const Page1 = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.8 }}
             >
-            <li className='hover:text-[#4ffaaa] hover:cursor-pointer'><BsLinkedin/></li>
-            <li className='hover:text-[#4ffaaa] hover:cursor-pointer'><BsGithub/></li>
-            <li className='hover:text-[#4ffaaa] hover:cursor-pointer'><TfiEmail/></li>
-            <li className='hover:text-[#4ffaaa] hover:cursor-pointer'><BsTwitter/></li>
-            <li className='hover:text-[#4ffaaa] hover:cursor-pointer'><TbFileCv/></li>
+            <Link href={'https://www.linkedin.com/in/oladele-akomolede'} target='blank'>
+              <li className='hover:text-[#4ffaaa] hover:cursor-pointer'><BsLinkedin/></li>
+            </Link>
+            <Link href={'https://github.com/nolimits20'} target='blank'>
+              <li className='hover:text-[#4ffaaa] hover:cursor-pointer'><BsGithub/></li>
+            </Link>
+            <Link href={'mailto:oladeleakomolede43@gmail.com'}>
+              <li className='hover:text-[#4ffaaa] hover:cursor-pointer'><TfiEmail/></li>
+            </Link>
+            <Link href={'https://x.com/officialnolimt'} target='blank'>
+              <li className='hover:text-[#4ffaaa] hover:cursor-pointer'><BsTwitter/></li>
+            </Link>
+            <Link href={'/oladele.pdf'} target='blank'>
+              <li className='hover:text-[#4ffaaa] hover:cursor-pointer'><TbFileCv/></li>
+            </Link>
             </motion.ul>
           </motion.div>
         </div>
