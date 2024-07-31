@@ -62,7 +62,7 @@ const Contact = () => {
 
   return (
     <motion.div 
-      className='bg-[#081C15] min-h-screen w-full relative p-4 lg:p-8 flex flex-col lg:flex-row items-center justify-center' 
+      className='bg-[#081C15] min-h-screen w-full relative p-4 lg:p-8 flex flex-col lg:flex-row items-center justify-center pt-8' 
       id='contact'
       variants={containerVariants}
       initial="hidden"

@@ -19,6 +19,7 @@ const ProjectCard = ({ project, index }) => {
       animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
       transition={{ duration: 0.8, delay: index * 0.2, ease:'easeOut' }}
       className='rounded-lg overflow-hidden relative mb-8 bg-[#081C15]'
+
     >
       <h2 className='text-white text-lg font-semibold p-4'>{project.name}</h2>
       <div className='w-full h-64 sm:h-72 md:h-80 relative'>
@@ -43,7 +44,7 @@ const ProjectCard = ({ project, index }) => {
 
 const Project = () => {
   return (
-    <div className='bg-[#081C15] min-h-screen w-full relative p-4 sm:p-8'>
+    <div id='project' className='bg-[#081C15] min-h-screen w-full relative p-4 sm:p-8'>
       <div className='absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#9baca2] from-67% to-[#a7cead] to-33%'></div>
       <h1 className='text-[#52B788] font-bold text-2xl sm:text-3xl px-4 sm:px-12 mt-8 sm:mt-16 mb-8 sm:mb-12 tracking-widest uppercase border-b border-[#52B788] pb-4'>Projects</h1>
       

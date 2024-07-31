@@ -28,7 +28,7 @@ const About = () => {
   }, [controlsLeft, controlsRight, inView]);
 
   return (
-    <div ref={ref} className='bg-[#081C15] min-h-screen w-full relative flex flex-col md:flex-row md:px-12 overflow-x-hidden' id='about'>
+    <div id='about' ref={ref} className='bg-[#081C15] min-h-screen w-full relative flex flex-col md:flex-row md:px-12 overflow-x-hidden pt-16'>
       <div className='absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#95D5B2] from-67% to-[#D8F3DC] to-33%'></div>
       
       {/* Left side double-layer container */}
@@ -38,16 +38,16 @@ const About = () => {
         className='w-full md:w-1/2 h-80 md:h-auto relative mb-8 md:mb-0 flex items-center justify-center'
       >
         <div>
-            <div className='absolute top-4 left-2 right-2 bottom-2 md:top-8 md:left-4 md:right-4 md:bottom-4 bg-[#1B4332] rounded-lg'></div>
-            <div className='absolute top-8 left-4 right-4 bottom-4 md:top-16 md:left-8 md:right-8 md:bottom-8 bg-[#2D6A4F] rounded-lg flex items-center justify-center'>
-              <Image
-                src='/pics-replace.png'
-                alt='about pics'
-                width={300}
-                height={300}
-                className='w-48 h-48 sm:w-60 sm:h-60 md:w-[600px] md:h-[600px] lg:w-[700px] lg:h-[700px] rounded-lg filter grayscale hover:grayscale-0 hover:hue-rotate-180 transition duration-500 ease-in-out'
-              />
-            </div>
+          <div className='absolute top-4 left-2 right-2 bottom-2 md:top-8 md:left-4 md:right-4 md:bottom-4 bg-[#1B4332] rounded-lg'></div>
+          <div className='absolute top-8 left-4 right-4 bottom-4 md:top-16 md:left-8 md:right-8 md:bottom-8 bg-[#2D6A4F] rounded-lg flex items-center justify-center'>
+            <Image
+              src='/pics-replace.png'
+              alt='about pics'
+              width={300}
+              height={300}
+              className='w-48 h-48 sm:w-60 sm:h-60 md:w-[600px] md:h-[600px] lg:w-[700px] lg:h-[700px] rounded-lg filter grayscale hover:grayscale-0 hover:hue-rotate-180 transition duration-500 ease-in-out'
+            />
+          </div>
         </div>
       </motion.div>
 

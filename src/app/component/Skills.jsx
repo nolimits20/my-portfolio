@@ -18,7 +18,7 @@ const SkillIcon = ({ children, label }) => {
 
 const Skills = () => {
   return (
-    <div className='bg-[#081C15] min-h-screen w-full relative' id='skills'>
+    <div className='bg-[#081C15] min-h-screen w-full relative pt-12' id='skills'>
       <div className='absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#9baca2] from-67% to-[#a7cead] to-33%'></div>
       <div className='flex flex-col sm:flex-row items-center justify-between px-4 sm:px-8 md:px-12 lg:px-16 pt-8 sm:pt-12 md:pt-16'>
         <h1 className='text-2xl sm:text-3xl md:text-4xl text-white font-bold tracking-wide mb-4 sm:mb-0'><span className='text-[#52B788]'>MY</span> SKILLS</h1>
