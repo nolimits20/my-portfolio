@@ -9,7 +9,7 @@ import Link from 'next/link';
 
 const Page1 = () => {
   return (
-    <div className='mt-16 min-h-screen w-full relative flex flex-col md:flex-row'>
+    <div id='home' className='mt-16 min-h-screen w-full relative flex flex-col md:flex-row'>
       {/* Background divs */}
       <div className='absolute top-0 left-0 w-full md:w-2/3 h-1/2 md:h-full bg-[#081C15] z-0'></div>
       <div className='absolute top-1/2 md:top-0 left-0 md:left-2/3 w-full md:w-1/3 h-1/2 md:h-full bg-[#52B788] z-0'></div>
