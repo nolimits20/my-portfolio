@@ -1,14 +1,46 @@
 'use client'
 import React from 'react';
 import Image from 'next/image';
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import Swal from 'sweetalert2';
 import { motion } from 'framer-motion';
 
 const Contact = () => {
-  const [result, setResult] = React.useState("")
+  const [result, setResult] = React.useState("");
+
   const onSubmit = async (event) => {
-    // ... (keep the existing onSubmit function as is)
+    event.preventDefault();
+    const formData = new FormData(event.target);
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData,
+      });
+
+      const data = await response.json();
+
+      if (response.status === 200) {
+        Swal.fire({
+          icon: 'success',
+          title: 'Success!',
+          text: 'Your message has been sent successfully.',
+        });
+        event.target.reset();
+      } else {
+        Swal.fire({
+          icon: 'error',
+          title: 'Oops...',
+          text: data.message || 'Something went wrong!',
+        });
+      }
+    } catch (error) {
+      console.error("Error:", error);
+      Swal.fire({
+        icon: 'error',
+        title: 'Oops...',
+        text: 'There was an error sending your message. Please try again later.',
+      });
+    }
   };
 
   const containerVariants = {
@@ -36,7 +68,6 @@ const Contact = () => {
       initial="hidden"
       animate="visible"
     >
-      <ToastContainer />
       <div className='absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#9baca2] to-[#a7cead]'></div>
       
       <motion.div className='flex justify-center w-full lg:w-5/12 lg:hidden mb-8' variants={itemVariants}>
@@ -60,6 +91,11 @@ const Contact = () => {
           Contact Me
         </motion.h2>
         <form className='space-y-4 w-full' onSubmit={onSubmit}>
+          <input 
+            type="hidden" 
+            name="access_key" 
+            value="aa47b919-68b2-49f7-bc31-b197a85095ab"
+          />
           <motion.div variants={itemVariants}>
             <label className='block text-[#081C15] mb-2' htmlFor='name'>Name</label>
             <input 
