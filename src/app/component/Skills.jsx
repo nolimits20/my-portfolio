@@ -4,14 +4,14 @@ import { motion } from 'framer-motion'
 
 const SkillIcon = ({ children, label }) => {
   return (
-    <div className='w-[400px] mx-8 my-8 flex flex-col items-center'>
+    <div className='w-full sm:w-[200px] md:w-[300px] lg:w-[400px] mx-2 sm:mx-4 md:mx-6 lg:mx-8 my-4 sm:my-6 md:my-8 flex flex-col items-center'>
       <motion.div 
-        className='bg-[#42e7ad00] w-full h-[300px] flex items-center justify-center rounded-lg'
+        className='bg-[#42e7ad00] w-full h-[150px] sm:h-[200px] md:h-[250px] lg:h-[300px] flex items-center justify-center rounded-lg'
         whileHover={{ scale: [1, 1.1, 1.05], transition: { duration: 1, repeat: 1 } }}
       >
         {children}
       </motion.div>
-      <p className='text-white mt-4'>{label}</p>
+      <p className='text-white mt-2 sm:mt-3 md:mt-4 text-sm sm:text-base'>{label}</p>
     </div>
   )
 }
@@ -20,12 +20,12 @@ const Skills = () => {
   return (
     <div className='bg-[#081C15] min-h-screen w-full relative' id='skills'>
       <div className='absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#9baca2] from-67% to-[#a7cead] to-33%'></div>
-      <div className='flex items-center justify-between'>
-        <h1 className='text-4xl text-white font-bold px-16 pt-16 tracking-wide'><span className='text-[#52B788]'>MY</span> SKILLS</h1>
-        <p className='border-t-4 border-[#52B788] w-[80%] mt-20'></p>
+      <div className='flex flex-col sm:flex-row items-center justify-between px-4 sm:px-8 md:px-12 lg:px-16 pt-8 sm:pt-12 md:pt-16'>
+        <h1 className='text-2xl sm:text-3xl md:text-4xl text-white font-bold tracking-wide mb-4 sm:mb-0'><span className='text-[#52B788]'>MY</span> SKILLS</h1>
+        <p className='border-t-4 border-[#52B788] w-full sm:w-[60%] md:w-[70%] lg:w-[80%] mt-4 sm:mt-6 md:mt-8 lg:mt-20'></p>
       </div>
-      <p className='text-white px-16 mt-4 mb-8'>These are Technologies I&apos;ve worked with</p>
-      <div className='flex flex-wrap justify-center'>
+      <p className='text-white px-4 sm:px-8 md:px-12 lg:px-16 mt-4 mb-8 text-sm sm:text-base'>These are Technologies I&apos;ve worked with</p>
+      <div className='flex flex-wrap justify-center px-2 sm:px-4'>
         <SkillIcon label="HTML">
           <svg fill="none" height="150" width="150" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 124 141.53199999999998"><path d="M10.383 126.894L0 0l124 .255-10.979 126.639-50.553 14.638z" fill="#e34f26"/><path d="M62.468 129.277V12.085l51.064.17-9.106 104.851z" fill="#ef652a"/><path d="M99.49 41.362l1.446-15.49H22.383l4.34 47.49h54.213L78.81 93.617l-17.362 4.68-17.617-5.106-.936-12.085H27.319l2.128 24.681 32 8.936 32.255-8.936 4.34-48.17H41.107L39.49 41.362z" fill="#fff"/></svg>
         </SkillIcon>
