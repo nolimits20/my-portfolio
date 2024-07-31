@@ -57,12 +57,16 @@ const Page1 = () => {
             transition={{ duration: 0.8, delay: 0.6 }}
           >
             <div className='flex flex-col sm:flex-row gap-2 sm:gap-4 mt-10 sm:mt-14 pt-8 sm:pt-10 md:pt-0 md:mt-5 mx-auto md:mx-0'>
-              <button className='bg-[#52B788] md:bg-transparent text-[#081C15] md:text-white p-2 sm:p-3 md:p-4 w-40 sm:w-[200px] md:w-[200px] border-2 border-[#081C15] md:border-white font-semibold hover:bg-white hover:text-[#081C15]'>
-                Contact Me
-              </button>
-              <button className='bg-[#081C15] md:bg-[#52B788] border-2 border-none md:border-transparent text-[#52B788] md:text-[#081C15] p-2 sm:p-3 md:p-4 font-semibold hover:bg-white w-40 sm:w-[200px] md:w-[200px]'>
-                Let&apos;s Talk
-              </button>
+              <Link href='#contact'>
+                <button className='bg-[#52B788] md:bg-transparent text-[#081C15] md:text-white p-2 sm:p-3 md:p-4 w-40 sm:w-[200px] md:w-[200px] border-2 border-[#081C15] md:border-white font-semibold hover:bg-white hover:text-[#081C15]'>
+                  Contact Me
+                </button>
+              </Link>
+              <Link href='https://wa.link/98daon' target='blank'>
+                <button className='bg-[#081C15] md:bg-[#52B788] border-2 border-none md:border-transparent text-[#52B788] md:text-[#081C15] p-2 sm:p-3 md:p-4 font-semibold hover:bg-white w-40 sm:w-[200px] md:w-[200px]'>
+                  Let&apos;s Talk
+                </button>
+              </Link>
             </div>
             
             {/* Icon list */}
